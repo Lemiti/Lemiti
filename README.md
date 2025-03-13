@@ -31,9 +31,9 @@ Here are some ideas to get you started:
 
 | Rank | Languages |
 |-----:|-----------|
-|     1| Python    |
+|     1| Java      |
 |     2| C         |
-|     3| JavaScript|
+|     3| Python    |
 
 </details>
 
