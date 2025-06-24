@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', () => {
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
-    L.marker([9.03, 38.74]).addTo(map)
+    L.marker([9.0399, 38.7615]).addTo(map)
       .bindPopup('Lemi\'s Location')
       .openPopup();
   }
