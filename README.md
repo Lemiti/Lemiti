@@ -34,6 +34,7 @@ Here are some ideas to get you started:
 |     1| Java      |
 |     2| C         |
 |     3| Python    |
+|     4| JavaScript|
 
 </details>
 
