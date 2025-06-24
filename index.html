@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lemi Negeso | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/favicon.ico" />
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script defer src="scripts/hero3d.js"></script>
+  <script defer src="scripts/main.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script defer src="scripts/map.js"></script>
+</head>
+<body>
+  <!-- Loader -->
+  <div id="loader">Loading...</div>
+
+  <!-- Navigation -->
+  <nav class="navbar fixed">
+    <div class="logo">Lemi</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="home" class="hero-section">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-text">
+      <h1>Hello, I'm <span>Lemi Negeso</span></h1>
+      <p><i>Tech Explorer & Problem Solver</i></p>
+      <p><b>"Crafting smart solutions for real-world problems."</b></p>
+      <p>I believe technology is more than machines and code—it's a way to serve others, solve meaningful challenges, and uncover the amazing design hidden in the universe.</p>
+    </div>
+  </header>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="filter-buttons">
+      <button data-filter="all">All</button>
+      <button data-filter="web">Web</button>
+      <button data-filter="ml">AI/ML</button>
+    </div>
+    <div class="projects-grid" id="projectGrid">
+      <div class="project-card" data-category="iot">
+        <h3>Smart Energy for Home Automation</h3>
+        <p>A relay-based IoT system to monitor power usage, room temperature, device runtime, and provide smart alerts—all without expensive smart appliances.</p>
+      </div>
+      <div class="project-card" data-category="ml">
+        <h3>Sentiment Analysis for Stock Market Movement</h3>
+        <p>Used NLP tools to analyze how public sentiment affects stock trends. A foundational project during AI/ML training with Kifiya.</p>
+      </div>
+      <div class="project-card" data-category="ml">
+        <h3>News Sentiment Analysis for Stock Prediction</h3>
+        <p>Applied machine learning to predict stock trends based on news headlines. Built on insights gained from prior analysis work.</p>
+      </div>
+      <div class="project-card" data-category="web">
+        <h3>Scheduler Mobile App (In Progress)</h3>
+        <p>Designed a planner app with dynamic task allocation, customizable views, and notification features. Paused but highly informative design process.</p>
+      </div>
+      <div class="project-card" data-category="ml">
+        <h3>10 Academy Challenges</h3>
+        <p>Ongoing weekly tasks in Git, EDA, NLP, and teamwork—enhancing both technical depth and real-world data skills.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-container">
+      <div class="skill-card" data-tooltip="Java">
+        <div class="bar" style="width: 90%">Java</div>
+      </div>
+      <div class="skill-card" data-tooltip="Python">
+        <div class="bar" style="width: 80%">Python</div>
+      </div>
+      <div class="skill-card" data-tooltip="C">
+        <div class="bar" style="width: 70%">C</div>
+      </div>
+      <div class="skill-card" data-tooltip="MySQL">
+        <div class="bar" style="width: 75%">MySQL</div>
+      </div>
+      <div class="skill-card" data-tooltip="HTML/CSS/JS">
+        <div class="bar" style="width: 65%">Web Development</div>
+      </div>
+      <div class="skill-card" data-tooltip="Arduino, Git, Linux">
+        <div class="bar" style="width: 85%">IoT & Tools</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section about">
+    <h2 class="section-title">About Me</h2>
+    <p class="bio">Hi, I’m Lemi Negeso, an Electrical and Computer Engineering student at Addis Ababa University. I’m passionate about using technology to simplify life, solve real-world problems, and appreciate the beauty of design found in creation. I chose ECE because it combines programming, physics, and mathematics subjects I loved since childhood. I enjoy reading and experimenting independently, then collaborating with others in a friendly, fun environment. My motivation is to do good while I’m alive and use tech to serve others.</p>
+    <div class="timeline">
+      <div class="timeline-item">2021/2022 - Started BSc in Electrical and Computer Engineering</div>
+      <div class="timeline-item">2023/2024 - Completed IoT-based Project</div>
+      <div class="timeline-item">2024/2025 - Joined 10 Academy and refined Data & ML Skills</div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact">
+    <h2 class="section-title">Get in Touch</h2>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <textarea name="message" placeholder="Your message..." required></textarea>
+      <button type="submit">Send</button>
+      <p id="formFeedback"></p>
+    </form>
+    <div id="messageList" class="submitted-messages"></div>
+
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/lemi-negeso/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/Lemiti" target="_blank">GitHub</a>
+    </div>
+    <div id="map"></div>
+  </section>
+
+  <!-- Modal Template -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="modalClose">&times;</span>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDescription"></p>
+    </div>
+  </div>
+</body>
+</html>
